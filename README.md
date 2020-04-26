@@ -14,7 +14,7 @@ Add the following line to the `require` section of `composer.json`:
 ```json
 {
     "require": {
-        "henriqueramos/laravel_json_schema_validator": "master"
+        "henriqueramos/laravel_json_schema_validator": "^1.0.0"
     }
 }
 ```
