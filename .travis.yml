@@ -1,0 +1,18 @@
+language: php
+os:
+  [
+    "linux"
+  ]
+dist: "bionic"
+php:
+  - '7.3'
+  - '7.4'
+before_script:
+  - phpenv config-rm xdebug.ini
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+script:
+  - phpunit
+cache:
+  directories:
+    - $HOME/.composer/cache/files
