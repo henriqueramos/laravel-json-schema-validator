@@ -1,0 +1,16 @@
+{
+    "version": 11,
+    "author": {
+        "name": "Henrique Ramos",
+        "favoriteFood": "Fast food",
+        "age": 29,
+        "favoriteFictionalCharacters": [
+            "Homer J. Simpson",
+            "Jack O'Neill"
+        ],
+        "bestDaysToEat": {
+            "start": "01/01",
+            "end": "12/31"
+        }
+    }
+}

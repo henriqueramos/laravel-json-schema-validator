@@ -1,0 +1,15 @@
+{
+    "version": 11,
+    "author": {
+        "name": "Homer Simpson",
+        "favoriteFood": "donuts",
+        "favoriteFictionalCharacters": [
+            "Superman",
+            "Itchy & Scratchy"
+        ],
+        "bestDaysToEat": {
+            "start": "01/01",
+            "end": "12/31"
+        }
+    }
+}

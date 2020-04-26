@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "json_schema.json",
+    "properties": {
+        "version": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 11
+        },
+        "author": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "favoriteFood": {
+                    "type": "string"
+                },
+                "age": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "favoriteFictionalCharacters": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/definitions/stringData"
+                    }
+                },
+                "bestDaysToEat": {
+                    "type": "object",
+                    "minItems": 2,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "start": {
+                                "type": "string",
+                                "pattern": "^([0-9]{2})/([0-9]{2})$"
+                            },
+                            "end": {
+                                "type": "string",
+                                "pattern": "^([0-9]{2})/([0-9]{2})$"
+                            }
+                        },
+                        "required": [
+                            "start",
+                            "end"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "favoriteFood",
+                "age",
+                "favoriteFictionalCharacters",
+                "bestDaysToEat"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "version",
+        "author"
+    ],
+    "definitions": {
+        "stringData": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": false
+}

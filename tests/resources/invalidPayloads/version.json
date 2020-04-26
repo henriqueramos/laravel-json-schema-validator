@@ -1,0 +1,15 @@
+{
+    "version": 12,
+    "author": {
+        "name": "Cylon",
+        "favoriteFood": "oil",
+        "age": 290,
+        "favoriteFictionalCharacters": [
+            "Humans"
+        ],
+        "bestDaysToEat": {
+            "start": "01/01",
+            "end": "12/31"
+        }
+    }
+}

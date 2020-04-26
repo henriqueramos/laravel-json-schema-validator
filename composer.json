@@ -1,0 +1,52 @@
+{
+    "name": "henriqueramos/laravel_json_schema_validator",
+    "type": "library",
+    "description": "Laravel JSON Schema Validator it's a Composer package created to help us to validate JSON Schemas.",
+    "keywords": ["laravel", "package", "validator", "json schema", "json", "Henrique Ramos", "madeInBrazil"],
+    "homepage": "https://henriqueramos.eti.br/opensources",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Henrique Ramos",
+            "email": "henrique@henriqueramos.eti.br",
+            "homepage": "https://henriqueramos.eti.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "laravel/framework": ">=5.8",
+        "swaggest/json-schema": "^0.12.29"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "slevomat/coding-standard": "~4.0",
+        "phpunit/phpunit": "8.5.4",
+        "phpunit/php-code-coverage": "^7.0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "RamosHenrique\\JsonSchemaValidator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RamosHenrique\\JsonSchemaValidator\\Testes\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpcs": [
+            "@php vendor/bin/phpcs --extensions=php --encoding=utf-8 --tab-width=4 -sp src",
+            "@php vendor/bin/phpcs --extensions=php --encoding=utf-8 --tab-width=4 -sp tests"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RamosHenrique\\JsonSchemaValidator\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
