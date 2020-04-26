@@ -2,6 +2,8 @@
 
 **JSON Schema Validator for Laravel** it is a `Composer` package created to validate JSON objects against [JSON Schemas](https://json-schema.org) as an `Illuminate\Validation\Validator` custom rule.
 
+[![Build Status](https://travis-ci.org/henriqueramos/laravel-json-schema-validator.svg?branch=master)](https://travis-ci.org/henriqueramos/laravel-json-schema-validator)
+
 ## About
 This package works only at Laravel versions `>= 5.8`. And PHP version `>= 7.3`.
 
