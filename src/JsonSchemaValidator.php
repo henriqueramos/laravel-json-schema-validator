@@ -30,9 +30,9 @@ class JsonSchemaValidator
         $this->rawData = $data;
     }
 
-    public function getData(): stdClass
+    public function getData(): array
     {
-        return (object) json_decode($this->rawData);
+        return json_decode($this->rawData);
     }
 
     public function validate(): bool
