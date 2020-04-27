@@ -30,7 +30,12 @@ class JsonSchemaValidator
         $this->rawData = $data;
     }
 
-    public function getData(): stdClass
+    /**
+     * Get decoded data for $rawData
+     *
+     * @return mixed This can be a mixed return. Array or stdClass
+     */
+    public function getData()
     {
         return json_decode($this->rawData);
     }

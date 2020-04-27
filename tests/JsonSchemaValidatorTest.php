@@ -18,7 +18,7 @@ class JsonSchemaValidatorTest extends TestCase
         return __DIR__ . '/resources/' . $filename;
     }
 
-    protected function retrieveDecodedPayload(string $filename): string
+    protected function retrievePayload(string $filename): string
     {
         return file_get_contents($this->retrieveFilePath($filename));
     }
@@ -27,7 +27,7 @@ class JsonSchemaValidatorTest extends TestCase
     {
         $schema = new JsonSchemaValidator();
         $schema->setSchema($this->retrieveFilePath('schema.json'));
-        $schema->setData($this->retrieveDecodedPayload('payload.json'));
+        $schema->setData($this->retrievePayload('payload.json'));
 
         $this->assertTrue($schema->validate(), 'True expected on validate result');
     }
@@ -39,7 +39,7 @@ class JsonSchemaValidatorTest extends TestCase
 
         $schema = new JsonSchemaValidator();
         $schema->setSchema($this->retrieveFilePath('schema.json'));
-        $schema->setData($this->retrieveDecodedPayload('invalidPayloads/version.json'));
+        $schema->setData($this->retrievePayload('invalidPayloads/version.json'));
 
         $schema->validate();
     }
@@ -51,7 +51,7 @@ class JsonSchemaValidatorTest extends TestCase
 
         $schema = new JsonSchemaValidator();
         $schema->setSchema($this->retrieveFilePath('schema.json'));
-        $schema->setData($this->retrieveDecodedPayload('invalidPayloads/age.json'));
+        $schema->setData($this->retrievePayload('invalidPayloads/age.json'));
 
         $schema->validate();
     }
