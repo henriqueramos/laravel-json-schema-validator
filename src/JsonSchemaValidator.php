@@ -25,14 +25,14 @@ class JsonSchemaValidator
         return json_decode($this->jsonSchema);
     }
 
-    public function setData(array $data): void
+    public function setData(string $data): void
     {
-        $this->rawData = json_encode($data);
+        $this->rawData = $data;
     }
 
     public function getData(): stdClass
     {
-        return json_decode($this->rawData);
+        return (object) json_decode($this->rawData);
     }
 
     public function validate(): bool

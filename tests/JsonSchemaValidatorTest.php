@@ -18,9 +18,9 @@ class JsonSchemaValidatorTest extends TestCase
         return __DIR__ . '/resources/' . $filename;
     }
 
-    protected function retrieveDecodedPayload(string $filename): array
+    protected function retrieveDecodedPayload(string $filename): string
     {
-        return json_decode(file_get_contents($this->retrieveFilePath($filename)), true);
+        return file_get_contents($this->retrieveFilePath($filename));
     }
 
     public function testValidationWithValidInformation(): void
