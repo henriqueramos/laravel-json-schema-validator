@@ -30,7 +30,7 @@ class JsonSchemaValidator
         $this->rawData = $data;
     }
 
-    public function getData(): array
+    public function getData(): stdClass
     {
         return json_decode($this->rawData);
     }
@@ -40,12 +40,13 @@ class JsonSchemaValidator
         $schema = $this->getSchema();
         $schemaDecode = json_last_error();
         $data = $this->getData();
+
         $dataDecode = json_last_error();
 
         if ($schemaDecode != JSON_ERROR_NONE ||
             $dataDecode != JSON_ERROR_NONE
         ) {
-            throw new JsonSchemaValidatorException(JsonSchemaValidatorException::FILE_DOESNT_EXIST);
+            throw new JsonSchemaValidatorException(JsonSchemaValidatorException::WASNT_POSSIBLE_DECODE_PARAMETERS);
         }
 
         $schema = BaseSchema::import($schema);
