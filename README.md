@@ -23,7 +23,7 @@ Add the following line to the `require` section of `composer.json`:
 
 ## Setup
 
-1. Run `php artisan vendor:publish --provider="RamosHenrique\JsonSchemaValidator"`. This will create on your `config` folder a file named `json_schema_validator.php`.
+1. Run `php artisan vendor:publish --provider="RamosHenrique\JsonSchemaValidator\ServiceProvider"`. This will create on your `config` folder a file named `json_schema_validator.php`.
 3. In your `.env` file, add your JSON Schema files storage path with key `JSON_SCHEMA_VALIDATOR_STORAGE_PATH` (i.e `JSON_SCHEMA_VALIDATOR_STORAGE_PATH=storage/jsonschemas/`).
 4. Set up your [JSON Schema file](#what-is-a-json-schema)  
 
